@@ -14,4 +14,4 @@ Route::get('/trangchu',[PageController::class,'getIndex']);
 use App\Http\Controllers\ProductController;
 
 Route::get('/products', [ProductController::class, 'index']);
-
+Route::get('/index', [PageController::class, 'index']);
