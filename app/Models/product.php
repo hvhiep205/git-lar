@@ -1,18 +1,24 @@
 <?php
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
     protected $table = 'products';
 
-    public $timestamps = true;
+    public function typeProduct()
+    {
+        return $this->belongsTo('App\Models\TypeProduct', 'id_type', 'id');
+    }
 
-    protected $fillable = [
-        'name', 'id_type', 'description', 'unit_price', 'promotion_price', 'image', 'unit', 'new'
-    ];
+    public function relatedProducts()
+    {
+        return $this->where('id_type', $this->id_type)->where('id', '!=', $this->id)->limit(3)->get();
+    }
+
+    public function newProducts()
+    {
+        return $this->orderBy('created_at', 'desc')->limit(4)->get();
+    }
 }
-
