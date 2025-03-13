@@ -17,3 +17,4 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/index', [PageController::class, 'index']);
 Route::get('/', [PageController::class, 'getIndex'])->name('trang-chu');
 Route::get('/type/{id}', [PageController::class, 'getLoaiSp']);
+Route::get('/chitiet/{id}', [PageController::class, 'getChiTietSanPham']);

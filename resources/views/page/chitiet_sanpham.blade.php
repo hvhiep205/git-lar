@@ -20,7 +20,7 @@
             <div class="col-sm-9">
                 <div class="row">
                     <div class="col-sm-4">
-                        <img src="source/source/image/product/{{$sanpham->image}}" alt="">
+                        <img src="source/image/product/{{$sanpham->image}}" alt="">
                     </div>
                     <div class="col-sm-8">
                         <div class="single-item-body">
@@ -87,7 +87,7 @@
                             <div class="col-sm-4">
                                 <div class="single-item">
                                     <div class="single-item-header">
-                                        <a href="#"><img src="source/source/image/product/{{ $product->image }}" alt=""></a>
+                                        <a href="#"><img src="source/image/product/{{ $product->image }}" alt=""></a>
                                     </div>
                                     <div class="single-item-body">
                                         <p class="single-item-title">{{ $product->name }}</p>
@@ -113,7 +113,7 @@
                         @foreach (range(1, 4) as $i)
                             <div class="media beta-sales-item">
                                 <a class="pull-left" href="#">
-                                    <img src="source/source/assets/dest/images/products/sales/{{ $i }}.png" alt="">
+                                    <img src="source/assets/dest/images/products/sales/{{ $i }}.png" alt="">
                                 </a>
                                 <div class="media-body">
                                     Sample Woman Top
@@ -129,7 +129,7 @@
                         @foreach ($newProducts as $product)
                             <div class="media beta-sales-item">
                                 <a class="pull-left" href="#">
-                                    <img src="source/source/image/product/{{ $product->image }}" alt="">
+                                    <img src="source/image/product/{{ $product->image }}" alt="">
                                 </a>
                                 <div class="media-body">
                                     {{ $product->name }}
