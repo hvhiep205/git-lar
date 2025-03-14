@@ -110,14 +110,14 @@
                 <div class="widget">
                     <h3 class="widget-title">Best Sellers</h3>
                     <div class="widget-body">
-                        @foreach (range(1, 4) as $i)
+                        @foreach ($relatedProducts as $i)
                             <div class="media beta-sales-item">
-                                <a class="pull-left" href="#">
-                                    <img src="source/assets/dest/images/products/sales/{{ $i }}.png" alt="">
+                                <a class="pull-left" href="chitiet/{{$i->id}}">
+                                    <img src="source/image/product/{{ $i->image }}" alt="">
                                 </a>
                                 <div class="media-body">
-                                    Sample Woman Top
-                                    <span class="beta-sales-price">$34.55</span>
+                                    {{ $i->name }}
+                                    <span class="beta-sales-price">${{ number_format($product->unit_price, 2) }}</span>
                                 </div>
                             </div>
                         @endforeach
@@ -128,7 +128,7 @@
                     <div class="widget-body">
                         @foreach ($newProducts as $product)
                             <div class="media beta-sales-item">
-                                <a class="pull-left" href="#">
+                                <a class="pull-left" href="chitiet/{{$product->id}}">
                                     <img src="source/image/product/{{ $product->image }}" alt="">
                                 </a>
                                 <div class="media-body">

@@ -18,3 +18,12 @@ Route::get('/index', [PageController::class, 'index']);
 Route::get('/', [PageController::class, 'getIndex'])->name('trang-chu');
 Route::get('/type/{id}', [PageController::class, 'getLoaiSp']);
 Route::get('/chitiet/{id}', [PageController::class, 'getChiTietSanPham']);
+Route::get('/about', [PageController::class, 'getAbout']);
+Route::get('/lienhe', [PageController::class, 'getLienHe']);
+Route::post('/admin-delete/{id}', [PageController::class, 'postAdminDelete']);																
+Route::get('/admin', [PageController::class, 'getIndexAdmin']);											
+Route::get('/admin-add-form', [PageController::class, 'getAdminAdd'])->name('add-product');															
+Route::post('/admin-add-form', [PageController::class, 'postAdminAdd']);	
+Route::get('/admin-edit-form/{id}', [PageController::class, 'getAdminEdit']);												
+Route::post('/admin-edit', [PageController::class, 'postAdminEdit']);
+

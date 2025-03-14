@@ -105,8 +105,8 @@
 								<li><a href="#">Sản phẩm 3</a></li>
 							</ul> --}}
 						</li>
-						<li><a href="#">Giới thiệu</a></li>
-						<li><a href="#">Liên hệ</a></li>
+						<li><a href="about/">Giới thiệu</a></li>
+						<li><a href="lienhe/">Liên hệ</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</nav>
